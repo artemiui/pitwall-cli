@@ -1,0 +1,3 @@
+# only one external library is used really
+
+requests>=2.31.0

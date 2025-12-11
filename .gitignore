@@ -1,0 +1,40 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+
+# Python tooling
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+.mypy_cache/
+.ruff_cache/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+
+# IDE / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Project artifacts
+f1-*.json
+f1-*.csv
+*.log
+
+# Local cache for CLI (default path lives in home dir but keep repo clean)
+.f1cli_cache/
+
+archive/version3
+archive/version2a.py
+archive/version1.py
