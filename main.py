@@ -5,7 +5,7 @@ Usage: python main.py [command] or run interactively
 
 """
 
-from f1cli.cli import main
+from source.cli import main
 
 
 if __name__ == "__main__":
