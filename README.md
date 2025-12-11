@@ -372,4 +372,4 @@ This CLI includes automatic rate limit detection and exponential backoff.
 
 - [OpenF1](https://api.openf1.org) for providing such a comprehensive, useful API without need for imports
 
-```README.md powered by Cursor```
+**Disclaimer:** This is an independent, fan-made project and is NOT affiliated with, endorsed by, or connected to Formula 1, Formula One World Championship Limited, the FIA, or any official F1 teams, sponsors, or partners.
