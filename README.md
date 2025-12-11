@@ -1,7 +1,6 @@
 # Pitwall-CLI
 
-Pitwall-CLI is an interactive command-line viewer for Formula 1 data powered by the OpenF1 API. It was created to make exporting and exploring F1 data easier for analysts and fans who want quick access to structured results, laps, stints, and telemetry-derived endpoints without writing API calls manually.
-
+<img width="3244" height="563" alt="HEADER" src="https://github.com/user-attachments/assets/bd0b1e3a-b5c4-4b3b-98dc-9918499b536a" />
 
 ![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
