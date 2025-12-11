@@ -128,9 +128,6 @@ python f13.py export laps format=csv session_key=9636 driver_number=44
 
 ## 📖 Usage Guide
 
-### Navigation Flow
-The CLI follows a natural hierarchical navigation:
-
 ```mermaid
 flowchart TD
     A[Start: Interactive Mode] --> B{Main Menu}
