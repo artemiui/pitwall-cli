@@ -27,6 +27,9 @@ Thumbs.db
 .idea/
 .vscode/
 
+f1-*.csv
+f1-*.json
+
 # Local cache for CLI (default path lives in home dir but keep repo clean)
 .f1cli_cache/
 
