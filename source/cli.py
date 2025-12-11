@@ -11,8 +11,9 @@ def interactive_mode():
     """Run in interactive mode."""
     print(f"{Color.GREEN}{Color.BOLD}")
     print("╔════════════════════════════════════════════════════════╗")
-    print("║              F1 CLI - INTERACTIVE MODE                 ║")
-    print("║          Fast Formula 1 Data from OpenF1              ║")
+    print("║                      PITWALL-CLI                       ║")
+    print("║                  F1 Data from OpenF1                   ║")
+    print("║                      by @artemiui                      ║")
     print("╚════════════════════════════════════════════════════════╝")
     print(f"{Color.RESET}")
     print(f"{Color.CYAN}Type a year (e.g., '2024') to start browsing{Color.RESET}")
