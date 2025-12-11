@@ -1,7 +1,6 @@
 # Pitwall-CLI
 
-Pitwall-CLI is an interactive command-line viewer for Formula 1 data powered by the OpenF1 API. It was created to make exporting and exploring F1 data easier for analysts and fans who want quick access to structured results, laps, stints, and telemetry-derived endpoints without writing API calls manually.
-
+<img width="3244" height="563" alt="HEADER" src="https://github.com/user-attachments/assets/bd0b1e3a-b5c4-4b3b-98dc-9918499b536a" />
 
 ![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -128,25 +127,50 @@ python f13.py export laps format=csv session_key=9636 driver_number=44
 
 ## 📖 Usage Guide
 
-### Navigation Flow
-The CLI follows a natural hierarchical navigation:
-
 ```mermaid
-flowchart LR
-    A[Year] --> B[Grand Prix<br>Meeting]
-    B --> C[Session<br>Practice/Qualifying/Race]
-    C --> D[Driver]
-    D --> E[Data<br>Laps/Stints/Pit Stops]
-```
-
-### Interactive Navigation
-```
-f1> 2024                     # Browse 2024 season
-f1/2024> 1056                # Select Australian Grand Prix
-f1/meeting-1056> 9636        # Select Race session
-f1/session-9636> 44          # Select driver #44 (Hamilton)
-f1/driver-44> laps           # View lap times
-f1/driver-44> back           # Go back to driver list
+flowchart TD
+    A[Start: Interactive Mode] --> B{Main Menu}
+    B -->|Year input 2024| C[show_year_meetings]
+    B -->|'gp' or 'current'| D[show_current_gp]
+    B -->|'help'| E[show_help]
+    B -->|'cache stats'| F[F1Cache.stats]
+    B -->|'exit/quit/q'| Z[Exit]
+    
+    C -->|Meeting Key 1056| G[show_meeting_sessions]
+    G -->|Session Key 9636| H[show_session_drivers]
+    H -->|Driver Number 44| I[show_driver_menu]
+    
+    I -->|'laps'| J[show_driver_laps]
+    I -->|'stints'| K[show_driver_stints]
+    I -->|'position'| L[show_driver_position]
+    I -->|'pit'| M[show_driver_pits]
+    I -->|'radio'| N[show_driver_radio]
+    I -->|'all'| O[show_driver_all]
+    I -->|'back'| H
+    
+    subgraph "Export Operations"
+        P[export command] --> Q{Format?}
+        Q -->|format=csv| R[export_to_csv]
+        Q -->|Default/format=json| S[export_to_json]
+        R --> T[flatten_json<br>for CSV structure]
+    end
+    
+    subgraph "Cache Operations"
+        U[cache command] --> V{subcommand?}
+        V -->|'stats'| W[F1Cache.stats]
+        V -->|'clear'| X[F1Cache.clear]
+        V -->|'info'| Y[Cache info display]
+    end
+    
+    J -->|'back'| I
+    K -->|'back'| I
+    L -->|'back'| I
+    M -->|'back'| I
+    N -->|'back'| I
+    O -->|'back'| I
+    H -->|'back'| G
+    G -->|'back'| C
+    C -->|'back'| B
 ```
 
 ### Command Reference
@@ -347,3 +371,5 @@ This CLI includes automatic rate limit detection and exponential backoff.
 ## Acknowledgments
 
 - [OpenF1](https://api.openf1.org) for providing such a comprehensive, useful API without need for imports
+
+```README.md powered by Cursor```
