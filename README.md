@@ -1,4 +1,3 @@
-# 🏎️ Pitwall CLI
 # Pitwall-CLI
 
 Pitwall-CLI is an interactive command-line viewer for Formula 1 data powered by the OpenF1 API. It was created to make exporting and exploring F1 data easier for analysts and fans who want quick access to structured results, laps, stints, and telemetry-derived endpoints without writing API calls manually.
@@ -327,7 +326,6 @@ python f13.py 2024
 ```
 
 ## 📈 Performance
-
 - **First load**: 2-5 seconds (API fetch + cache)
 - **Cached load**: < 0.1 seconds (local cache)
 - **Memory usage**: < 50MB
@@ -344,41 +342,8 @@ This CLI uses the [OpenF1 API](https://api.openf1.org), which provides:
 The OpenF1 API has rate limits for unauthenticated access:
 - Free tier: Limited requests per minute
 - Paid tier: Higher limits available
-
 This CLI includes automatic rate limit detection and exponential backoff.
 
-## 📄 License
+## Acknowledgments
 
-MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- [OpenF1](https://api.openf1.org) for providing the free API
-- The F1 community for testing and feedback
-- Contributors who help improve this tool
-
-## 🏁 Roadmap
-
-- [ ] Real-time live session updates
-- [ ] Driver comparison mode
-- [ ] Historical statistics analysis
-- [ ] Graphical visualizations (ASCII/terminal)
-- [ ] Team/constructor focus mode
-- [ ] Customizable themes and layouts
-- [ ] Plugin system for custom data sources
-
----
-
-**Need help?** Open an issue on GitHub or use the `help` command in the CLI!
-
-**Found a bug?** Please report it with steps to reproduce and your CLI version.
-
-**Have a feature request?** We'd love to hear your ideas!
-
----
-
-<p align="center">
-  Made with ❤️ for the F1 community
-  <br>
-  <sub>Get in the fast lane with FastLap CLI!</sub>
-</p>
+- [OpenF1](https://api.openf1.org) for providing such a comprehensive, useful API without need for imports
