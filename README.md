@@ -11,9 +11,6 @@
 - Interactive prompt with contextual breadcrumbs and colorized output.
 - Quick navigation: enter a year, meeting key, session key, or driver number to drill down.
 - Driver data views: laps, stints, position changes, pit stops, team radio, or “all”.
-- Exports: any OpenF1 endpoint to JSON (default) or CSV with automatic context filling.
-- Smart caching with expiry per endpoint and controls to clear or inspect cache.
-- Retry-aware HTTP client with basic rate-limit messaging.
 
 ## Commands (interactive mode)
 - `year` (e.g., `2024`): list all Grand Prix for that season.
@@ -102,7 +99,7 @@ pip install -r requirements.txt
 pip install requests pandas  # Core dependencies
 ```
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Interactive Mode
 ```bash
@@ -125,7 +122,7 @@ python main.py 2024
 python f13.py export laps format=csv session_key=9636 driver_number=44
 ```
 
-## 📖 Usage Guide
+## Usage Guide
 
 ```mermaid
 flowchart TD
@@ -233,7 +230,7 @@ refresh
 | `clear` | Clear screen and refresh view |
 | `exit` / `quit` / `q` | Exit the application |
 
-## 📊 Data Examples
+## Data Examples
 
 ### Lap Time Display
 ```
@@ -257,7 +254,7 @@ STINT  COMPOUND    START    END    PROG.    TOTAL
 3      SOFT        43       58     16 laps  (16)
 ```
 
-## ⚙️ Configuration
+## Configuration
 
 ### Cache Settings
 The CLI automatically caches data in `~/.f1cli_cache/` with intelligent expiration:
@@ -282,7 +279,7 @@ export F1_DISABLE_CACHE=1
 export F1_CACHE_DIR=~/.my_f1_cache
 ```
 
-## 🔧 Development
+## Development
 ### Key Components
 - **F1Cache Class**: Intelligent caching with expiration policies
 - **Context Management**: Track navigation state across commands
@@ -298,12 +295,7 @@ def show_driver_weather(session_key: str, driver_number: str, force_refresh: boo
 ```
 2. Add to driver menu options
 3. Add command handler in `process_command()`
-## 🤝 Contributing
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+
 ### Development Setup
 ```bash
 # Clone and setup
@@ -320,7 +312,7 @@ python -m pytest tests/
 black f13.py
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
@@ -349,13 +341,13 @@ export F1_DEBUG=1
 python f13.py 2024
 ```
 
-## 📈 Performance
+## Performance
 - **First load**: 2-5 seconds (API fetch + cache)
 - **Cached load**: < 0.1 seconds (local cache)
 - **Memory usage**: < 50MB
 - **Cache size**: Typically 10-50MB per season
 
-## 🔗 API Reference
+## API Reference
 
 This CLI uses the [OpenF1 API](https://api.openf1.org), which provides:
 - Free access to historical F1 data
